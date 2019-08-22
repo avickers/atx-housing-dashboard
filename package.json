@@ -1,0 +1,36 @@
+{
+  "name": "atx-housing-dashboard",
+  "version": "0.0.2",
+  "description": "Affordable Housing Dashboard: Austin, TX",
+  "main": "packages/node_modules/website/index.js",
+  "keywords": [
+    "atx",
+    "austin",
+    "affordable-housing"
+  ],
+  "author": "avickers",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "NODE_ENV=production && parcel build packages/node_modules/website/index.html",
+    "start": "parcel packages/node_modules/website/index.html"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@knockdown/knockdown": "git+ssh://git@git.knockdown.dev/knockdown/knockdown.git",
+    "@knockdown/undercard": "git+ssh://git@git.knockdown.dev/knockdown/undercard.git",
+    "lokijs": "^1.5.7"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-plugin-compress": "^1.0.10"
+  },
+  "compress": {
+    "brotli": {
+      "enabled": false
+    }
+  },
+  "browserslist": [
+    "last 3 chrome versions"
+  ]
+}
